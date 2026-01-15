@@ -1,0 +1,6 @@
+C:/dev/OpenGLRenderer/CMakeFiles/Main.dir
+C:/dev/OpenGLRenderer/CMakeFiles/Shaders.dir
+C:/dev/OpenGLRenderer/CMakeFiles/Textures.dir
+C:/dev/OpenGLRenderer/CMakeFiles/Assets.dir
+C:/dev/OpenGLRenderer/CMakeFiles/ALL_BUILD.dir
+C:/dev/OpenGLRenderer/CMakeFiles/ZERO_CHECK.dir

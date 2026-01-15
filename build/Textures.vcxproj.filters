@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\dev\OpenGLRenderer\build\CMakeFiles\a0498ae06a00a1b5f0465cf605f52e99\Textures.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\dev\OpenGLRenderer\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\dev\OpenGLRenderer\build\CMakeFiles\Textures" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{B408CFC2-5246-36A6-AD92-BABC8A339CB9}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
