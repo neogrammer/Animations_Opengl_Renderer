@@ -224,7 +224,7 @@ void OGLRenderer::handleMovementKeys() {
 
 void OGLRenderer::draw() {
 
-    Logger::log(1, "%s error: Entered draw\n", __FUNCTION__);
+    //Logger::log(1, "%s error: Entered draw\n", __FUNCTION__);
 
     /* handle minimize */
     while (mRenderData.rdWidth == 0 || mRenderData.rdHeight == 0) {
@@ -232,7 +232,7 @@ void OGLRenderer::draw() {
         glfwWaitEvents();
     }
 
-    Logger::log(1, "%s error: minimize handled\n", __FUNCTION__);
+   // Logger::log(1, "%s error: minimize handled\n", __FUNCTION__);
 
     /* get time difference for movement */
     double tickTime = glfwGetTime();
@@ -241,16 +241,16 @@ void OGLRenderer::draw() {
     mRenderData.rdFrameTime = mFrameTimer.stop();
     mFrameTimer.start();
 
-    Logger::log(1, "%s error: Frametimer started\n", __FUNCTION__);
+   // Logger::log(1, "%s error: Frametimer started\n", __FUNCTION__);
 
     handleMovementKeys();
 
-    Logger::log(1, "%s error: HandledMovementKeys\n", __FUNCTION__);
+   // Logger::log(1, "%s error: HandledMovementKeys\n", __FUNCTION__);
 
 
     /* draw to framebuffer */
     mFramebuffer.bind();
-    Logger::log(1, "%s FrameBuffer bound\n", __FUNCTION__);
+   // Logger::log(1, "%s FrameBuffer bound\n", __FUNCTION__);
     glClearColor(0.25f, 0.25f, 0.25f, 1.0f);
     glClearDepth(1.0f);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
@@ -266,25 +266,25 @@ void OGLRenderer::draw() {
     /* animate */
     mRenderData.rdClipName = mGltfModel->getClipName(mRenderData.rdAnimClip);
    
-    Logger::log(1, "%s Attempting to play animation\n", __FUNCTION__);
+   // Logger::log(1, "%s Attempting to play animation\n", __FUNCTION__);
 
     // switch between animation replay and single frame control
     if (mRenderData.rdPlayAnimation) {
-        Logger::log(1, "%s Playing animation\n", __FUNCTION__);
+    //    Logger::log(1, "%s Playing animation\n", __FUNCTION__);
         mGltfModel->playAnimation(mRenderData.rdAnimClip, mRenderData.rdAnimSpeed);
     }
     else {
-        Logger::log(1, "%s setAnimationFrame\n", __FUNCTION__);
+   //     Logger::log(1, "%s setAnimationFrame\n", __FUNCTION__);
         mRenderData.rdAnimEndTime = mGltfModel->getAnimationEndTime(mRenderData.rdAnimClip);
         mGltfModel->setAnimationFrame(mRenderData.rdAnimClip, mRenderData.rdAnimTimePosition);
     }
 
-    Logger::log(1, "%s Animation Play Chosen\n", __FUNCTION__);
+ //   Logger::log(1, "%s Animation Play Chosen\n", __FUNCTION__);
 
     /* get gltTF skeleton */
     if (mRenderData.rdDrawSkeleton) {
         mSkeletonMesh = mGltfModel->getSkeleton();
-        Logger::log(1, "%s Got Skeleton\n", __FUNCTION__);
+       // Logger::log(1, "%s Got Skeleton\n", __FUNCTION__);
 
     }
     mRenderData.rdMatrixGenerateTime = mMatrixGenerateTimer.stop();

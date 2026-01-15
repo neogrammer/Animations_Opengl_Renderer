@@ -216,7 +216,7 @@ glm::vec3 GltfAnimationChannel::getTranslation(float time) {
 }
 
 glm::quat GltfAnimationChannel::getRotation(float time) {
-    Logger::log(1, "%s getRotation entered\n", __FUNCTION__);
+    //Logger::log(1, "%s getRotation entered\n", __FUNCTION__);
 
     if (mRotations.size() == 0) {
     return glm::identity<glm::quat>();

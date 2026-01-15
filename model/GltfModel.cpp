@@ -30,7 +30,7 @@ bool GltfModel::loadModel(OGLRenderData& renderData,
         modelFilename);
 
     if (!loaderWarnings.empty()) {
-        Logger::log(1, "%s: warnings while loading glTF model:\n%s\n", __FUNCTION__,
+       Logger::log(1, "%s: warnings while loading glTF model:\n%s\n", __FUNCTION__,
             loaderWarnings.c_str());
     }
 
@@ -40,7 +40,7 @@ bool GltfModel::loadModel(OGLRenderData& renderData,
     }
 
     if (!result) {
-        Logger::log(1, "%s error: could not load file '%s'\n", __FUNCTION__,
+       Logger::log(1, "%s error: could not load file '%s'\n", __FUNCTION__,
             modelFilename.c_str());
         return false;
     }

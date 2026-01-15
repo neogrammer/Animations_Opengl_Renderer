@@ -39,7 +39,7 @@ void GltfNode::setTranslation(glm::vec3 translation) {
 }
 
 void GltfNode::setRotation(glm::quat rotation) {
-    Logger::log(1, "%s setRotationEntered\n", __FUNCTION__);
+    //Logger::log(1, "%s setRotationEntered\n", __FUNCTION__);
   mRotation = rotation;
 }
 

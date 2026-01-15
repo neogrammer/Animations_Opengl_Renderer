@@ -61,12 +61,12 @@ bool Window::init(unsigned int width, unsigned int height, std::string title) {
 
 
 void Window::mainLoop() {
-    Logger::log(1, "%s error: Entered mainLoop\n", __FUNCTION__);
+   // Logger::log(1, "%s error: Entered mainLoop\n", __FUNCTION__);
   /* force VSYNC */
   glfwSwapInterval(1);
 
   while (!glfwWindowShouldClose(mWindow)) {
-      Logger::log(1, "%s error: Entered while Loop\n", __FUNCTION__);
+     // Logger::log(1, "%s error: Entered while Loop\n", __FUNCTION__);
 
     mRenderer->draw();
 
@@ -77,7 +77,7 @@ void Window::mainLoop() {
     glfwPollEvents();
 
   }
-  Logger::log(1, "%s error: Exiting mainLoop\n", __FUNCTION__);
+  //Logger::log(1, "%s error: Exiting mainLoop\n", __FUNCTION__);
 
 }
 
